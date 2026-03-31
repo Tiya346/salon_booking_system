@@ -19,13 +19,13 @@ A console-based salon appointment manager built in Java as an Object-Oriented Pr
 
 ```
 SalonBookingSystem/
-├── Bookable.java          # Interface — booking contract (confirm, cancel, duration)
-├── Service.java           # Abstract class — shared service fields and abstract methods
-├── HairService.java       # Subclass — hair-specific pricing and booking logic
-├── SkinService.java       # Subclass — skin-specific pricing and booking logic
-├── Appointment.java       # Data class — holds all info for one booking
-├── BookingManager.java    # Business logic — manages the appointment list
-└── Main.java              # Entry point — demo of all features
+├── Bookable.java          # Interface booking contract (confirm, cancel, duration)
+├── Service.java           # Abstract class shared service fields and abstract methods
+├── HairService.java       # Subclass hair-specific pricing and booking logic
+├── SkinService.java       # Subclass skin-specific pricing and booking logic
+├── Appointment.java       # Data class holds all info for one booking
+├── BookingManager.java    # Business logic manages the appointment list
+└── Main.java              # Entry point demo of all features
 ```
 
 ---
@@ -33,7 +33,7 @@ SalonBookingSystem/
 ## OOP Concepts Used
 
 ### Abstraction
-`Service` is declared `abstract` — you cannot create a `Service` object directly. It defines two abstract methods, `calculatePrice()` and `getServiceDetails()`, that every subclass must implement. The `Bookable` interface provides a second layer of abstraction, defining the booking contract independently of the service hierarchy.
+`Service` is declared `abstract` you cannot create a `Service` object directly. It defines two abstract methods, `calculatePrice()` and `getServiceDetails()`, that every subclass must implement. The `Bookable` interface provides a second layer of abstraction, defining the booking contract independently of the service hierarchy.
 
 ### Encapsulation
 Every field in every class is `private`. Nothing outside a class can read or modify its fields directly all access goes through getters and setters. This makes state changes easy to trace and keeps each class in control of its own data.
@@ -42,7 +42,7 @@ Every field in every class is `private`. Nothing outside a class can read or mod
 `HairService` and `SkinService` both extend `Service`. They inherit the shared fields (`serviceName`, `basePrice`, `staffName`) and the concrete `displayInfo()` method, while adding their own type-specific fields and overriding the abstract methods.
 
 ### Polymorphism
-Both subclasses override `calculatePrice()` with their own pricing logic. When a `Service[]` array holds a mix of `HairService` and `SkinService` objects and `calculatePrice()` is called on each, Java automatically dispatches to the correct version at runtime — no `if/else` type-checking needed.
+Both subclasses override `calculatePrice()` with their own pricing logic. When a `Service[]` array holds a mix of `HairService` and `SkinService` objects and `calculatePrice()` is called on each, Java automatically dispatches to the correct version at runtime no `if/else` type-checking needed.
 
 ---
 
