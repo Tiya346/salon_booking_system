@@ -36,7 +36,7 @@ SalonBookingSystem/
 `Service` is declared `abstract` — you cannot create a `Service` object directly. It defines two abstract methods, `calculatePrice()` and `getServiceDetails()`, that every subclass must implement. The `Bookable` interface provides a second layer of abstraction, defining the booking contract independently of the service hierarchy.
 
 ### Encapsulation
-Every field in every class is `private`. Nothing outside a class can read or modify its fields directly — all access goes through getters and setters. This makes state changes easy to trace and keeps each class in control of its own data.
+Every field in every class is `private`. Nothing outside a class can read or modify its fields directly all access goes through getters and setters. This makes state changes easy to trace and keeps each class in control of its own data.
 
 ### Inheritance
 `HairService` and `SkinService` both extend `Service`. They inherit the shared fields (`serviceName`, `basePrice`, `staffName`) and the concrete `displayInfo()` method, while adding their own type-specific fields and overriding the abstract methods.
@@ -48,12 +48,12 @@ Both subclasses override `calculatePrice()` with their own pricing logic. When a
 
 ## How Pricing Works
 
-**Hair Service** — starts at the base price, then adds:
+**Hair Service**  starts at the base price, then adds:
 - `+$10` for medium-length hair
 - `+$20` for long hair
 - `+$8` if a wash is included
 
-**Skin Service** — starts at the base price, then adds:
+**Skin Service**  starts at the base price, then adds:
 - `+$10` for dry skin
 - `+$15` for sensitive skin
 - `+$25` if premium products are used
