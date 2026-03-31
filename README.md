@@ -1,6 +1,6 @@
 # Java Salon Booking System
 
-A console-based salon appointment manager built in Java as an Object-Oriented Programming course project. The system lets you create hair and skin services, book appointments for customers, cancel bookings, and view a revenue summary — all while demonstrating the four core OOP pillars: **Abstraction**, **Encapsulation**, **Inheritance**, and **Polymorphism**.
+A console-based salon appointment manager built in Java as an Object-Oriented Programming course project. The system lets you create hair and skin services, book appointments for customers, cancel bookings, and view a revenue summary  all while demonstrating the four core OOP pillars: **Abstraction**, **Encapsulation**, **Inheritance**, and **Polymorphism**.
 
 ---
 
